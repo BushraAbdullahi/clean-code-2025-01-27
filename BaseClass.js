@@ -1,11 +1,6 @@
-import { Tablespoon } from "./Tablespoon";
+export class BaseClass {
 
-export class Teaspoon {
-  constructor(amount) {
-    this.amount = amount;
-  }
-
-  equals(measurement) {
+  toTeaspoon(measurement) {
     if (measurement instanceof Teaspoon) {
       return this.amount === measurement.amount;
     } else if (measurement instanceof Tablespoon) {
@@ -13,4 +8,3 @@ export class Teaspoon {
     }
   }
 }
-
